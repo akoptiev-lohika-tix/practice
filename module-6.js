@@ -89,3 +89,60 @@
 //     bookList.append(bookItem);
 // });
 
+const counter = document.querySelector('.result');
+
+const incrementButton = document.querySelector('.increment');
+const decrementButton = document.querySelector('.decrement');
+
+let result = 0;
+
+setResult(0);
+
+function setResult(value) {
+    result = value;
+    counter.textContent = value;
+}
+
+const handleIncrement = () => {
+    setResult(result + 1);
+};
+
+const handleDecrement = () => {
+    if (result === 0) {
+        return;
+    }
+    setResult(result - 1);
+};
+
+incrementButton.addEventListener('click', handleIncrement);
+decrementButton.addEventListener('click', handleDecrement);
+const inputRef = document.querySelector('.input')
+const outputRef = document.querySelector('.output')
+
+const onInputChange = (event) => {
+    outputRef.textContent = event.target.value
+}
+
+inputRef.addEventListener('input', onInputChange)
+
+const form = document.querySelector('.form');
+
+const onSubmitForm = (event) => {
+    event.preventDefault();
+   
+    const { login, password } = event.target;
+    console.log(login)
+
+    if (login.value === '' || password.value === '') {
+        alert('Fill all fields please');
+        
+        return;
+    }
+
+    console.log(`Login: ${login.value}`);
+    console.log(`Password: ${password.value}`);
+
+    form.reset();
+};
+
+form.addEventListener('submit', onSubmitForm);
