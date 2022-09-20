@@ -1,4 +1,5 @@
-.book {
+/* .book {
+
     font-size: 22px;
     margin-bottom: 20px;
 }
@@ -9,4 +10,29 @@
 
 .books-list {
     border: 1px solid black;
+} */
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.result {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.increment {
+    width: 100px;
+}
+.decrement {
+    width: 100px;
 }

@@ -8,54 +8,54 @@
 
 // 5. Додати Title використовуючи insertAdjacentHTML
 
-const books = [
-    {
-        title: 'The Last Kingdom',
-        author: 'Bernard Cornwell',
-        rating: 8.38,
-    },
-    {
-        title: 'Beside Still Waters',
-        author: 'Robert Sheckley',
-        rating: 8.51,
-    },
-    {
-        title: 'The Dream of a Ridiculous Man',
-        author: 'Fyodor Dostoevsky',
-        rating: 7.75,
-    },
-    {
-        title: 'Redder Than Blood',
-        author: 'Tanith Lee',
-        rating: 7.94,
-    },
-    {
-        title: 'Enemy of God',
-        author: 'Bernard Cornwell',
-        rating: 8.67,
-    },
-];
+// const books = [
+//     {
+//         title: 'The Last Kingdom',
+//         author: 'Bernard Cornwell',
+//         rating: 8.38,
+//     },
+//     {
+//         title: 'Beside Still Waters',
+//         author: 'Robert Sheckley',
+//         rating: 8.51,
+//     },
+//     {
+//         title: 'The Dream of a Ridiculous Man',
+//         author: 'Fyodor Dostoevsky',
+//         rating: 7.75,
+//     },
+//     {
+//         title: 'Redder Than Blood',
+//         author: 'Tanith Lee',
+//         rating: 7.94,
+//     },
+//     {
+//         title: 'Enemy of God',
+//         author: 'Bernard Cornwell',
+//         rating: 8.67,
+//     },
+// ];
 
-const bookList = document.querySelector('.books-list');
+// const bookList = document.querySelector('.books-list');
 
-const bookItemList = books
-    .map(
-        (book) => `
-<li class="${book.author}">
-  <p>${book.title}</p>
-</li>
-`
-    )
-    .join('');
+// const bookItemList = books
+//     .map(
+//         (book) => `
+// <li class="${book.author}">
+//   <p>${book.title}</p>
+// </li>
+// `
+//     )
+//     .join('');
 
-bookList.insertAdjacentHTML('afterbegin', bookItemList);
+// bookList.insertAdjacentHTML('afterbegin', bookItemList);
 
-const title = `<h1>Books</h1>`;
-bookList.insertAdjacentHTML('beforebegin', title);
+// const title = `<h1>Books</h1>`;
+// bookList.insertAdjacentHTML('beforebegin', title);
 
-console.log(bookList.children);
+// console.log(bookList.children);
 
-bookList.children[0].remove();
+// bookList.children[0].remove();
 
 // const bookItemList = books.map((book) => {
 //     const bookItem = document.createElement('li');
@@ -88,3 +88,4 @@ bookList.children[0].remove();
 
 //     bookList.append(bookItem);
 // });
+
